@@ -13,12 +13,14 @@
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
         
-    	    <!-- Bootstrap CSS -->
-    	    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    		<!-- Bootstrap CSS -->
+    		<link rel="stylesheet" href="/css/bootstrap.min.css" crossorigin="anonymous">
             <!-- Main CSS -->
-            <link rel="stylesheet" href="css/main.css">
+            <link rel="stylesheet" href="/css/main.css">
             <!-- Font Awesome CSS -->
-            <link rel="stylesheet" href="css/font-awesome.min.css">            
+            <link rel="stylesheet" href="/css/font-awesome.min.css">   
+            <!-- Hover CSS -->
+            <link href="/css/hover.css" rel="stylesheet">         
             <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
             <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
             <!--[if lt IE 9]>
@@ -33,7 +35,7 @@
 <header>
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 		<a class="navbar-brand" href="#">
-			<img src="images/logo.png" width="94" height="80" alt="">
+			<img src="/images/logo.png" width="100" height="85" alt="">
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
@@ -42,20 +44,35 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="nav nav-pills ml-5 mr-auto">
 				<li class="nav-item">
-					<a class="nav-link" href="index.html" style="background-color: #2fa969">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-link hvr-grow" href="index.html" style="color: #ffffff">Home</a>
 				</li>
 				<li class="nav-item">
-			    	<a class="nav-link disabled" href="products.html">Productos</a>
+			    	<a class="nav-link hvr-grow" href="sign_in.html" style="color: #ffffff">Productos</a>
 				</li>
 				<li class="nav-item">
-			    	<a class="nav-link  active" href="contact.html" style="color: #ffffff">Contacto</a>
+			    	<a class="nav-link hvr-grow active" href="contact.html" style="background-color: #306f4f">Contacto<span class="sr-only">(current)</span></a>
 			 	</li>
 			</ul>
+			<ul class="nav justify-content-end  my-2 my-lg-0 mr-3 invisible">
+				<!-- User navbar with dropdown -->
+	            <li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: #ffffff">
+						<i class="fa fa-user" aria-hidden="true"></i>  Usuario
+					</a>
+			        <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown">
+			          <a class="dropdown-item" href="#">Perfil</a>
+			          <div class="dropdown-divider"></div>
+			          <a class="dropdown-item" href="index.html"><i class="fa fa-power-off" aria-hidden="true"></i>  Cerrar Sesion</a>
+			        </div>
+			    </li>								
+			</ul>
+			<!--
 			<form class="form-inline my-2 my-lg-0">
 				<input class="form-control mr-sm-2" type="text" placeholder="Usuario" aria-label="Usuario">
 				<input class="form-control mr-sm-2" type="password" placeholder="Contraseña" aria-label="Contraseña">
 			  	<button class="btn btn-primary my-2 my-sm-0" type="submit" style="background-color: #2fa969;border-color: #2fa969">Iniciar</button>
 			</form>
+			-->
 		</div>
 	</nav>	
 </header>
@@ -65,24 +82,102 @@
 	<![endif]-->
 	<!-- Container Page -->
 	<div class="container">
+
+		<h1 class="mt-4 mb-3"> Contacto </h1>
+
+	    <!-- Breadcrumb -->
+	    <nav class="pt-2" aria-label="breadcrumb" role="navigation">
+	      <ol class="breadcrumb">
+	        <li class="breadcrumb-item"><a href="#">Home</a></li>
+	        <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+	      </ol>
+	    </nav>
+	    <!-- End breadcrumb -->
+
+	    <div class="row pb-3">
+	    	<div class="col-md-8">
+				<a class="google-maps" href="https://goo.gl/maps/hp78Cj8zJXn">
+					<img class="maps" src="https://maps.googleapis.com/maps/api/staticmap?center=-33.146659, -64.352571&amp;zoom=16&amp;size=800x400&amp;maptype=roadmap&amp;markers=color:red%7C-33.146659, -64.352571&amp;key=AIzaSyBtuXYKPXPOw7dtl36uNVM8kcKtdwa6XeQ">
+				<a>	    		
+	    	</div>
+	    	
+	    	<div class="col-md-4">
+	    		<h3> Detalle de Contacto</h3>
+	    		<p>Psje. Araoz 2744 <br>Río Cuarto, Cordoba CP: 5800<br></p>
+          		<p>
+            		<abbr title="Telefono"><i class="fa fa-phone" aria-hidden="true"></i></abbr>: +54 (358) 154024296
+          		</p>
+          		<p>
+            		<abbr title="Email"><i class="fa fa-envelope-o" aria-hidden="true"></i></abbr>:
+            			<a href="mailto: fymdistribuidora@gmail.com"> fymdistribuidora@gmail.com</a>
+          		</p>
+          		<p>
+            		<abbr title="Horarios"><i class="fa fa-clock-o" aria-hidden="true"></i></abbr>: Lunes - Viernes: 8:00 a 12:00 - Sabados 8:30 a 12:30
+          		</p>
+	    	</div>
+	    </div>
+
+        <!-- Contact Form -->
+        <!-- In order to set the email address and subject line for the contact form go to the bin/contact_me.php file. -->
+        <div class="row pb-3">
+            <div class="col-md-8">
+                <h3>Envianos tu consulta o mensaje</h3>
+                <form name="sentMessage" id="contactForm" novalidate>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Nombre Completo:</label>
+                            <input type="text" class="form-control" id="name" required data-validation-required-message="Por favor ingrese su nombre.">
+                            <p class="help-block"></p>
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Numero de Telefono:</label>
+                            <input type="tel" class="form-control" id="phone" required data-validation-required-message="Por favor ingrese su numero de Telefono.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Email:</label>
+                            <input type="email" class="form-control" id="email" required data-validation-required-message="Por favor ingrese correctamente su email.">
+                        </div>
+                    </div>
+                    <div class="control-group form-group">
+                        <div class="controls">
+                            <label>Mensaje:</label>
+                            <textarea rows="10" cols="100" class="form-control" id="message" required data-validation-required-message="Por favor ingrese su mensaje." maxlength="999" style="resize:none"></textarea>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <!-- For success/fail messages -->
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
 	</div>
     <!-- Footer -->
-<footer class="py-5 bg-dark">
+<footer class="py-2 bg-dark">
 	<div class="container">
 		<div class="row justify-content-md-center">
 			<div class="col">
-				<p class="m-0 text-center text-white">Psje. Araoz 2744 Río Cuarto, Cordoba Te: +54 358-⁠⁠⁠154024296</p>			
+				<p class="m-0 text-center text-white">
+					<i class="fa fa-map-marker" aria-hidden="true"></i>  Psje. Araoz 2744 Río Cuarto, Cordoba -  
+					<i class="fa fa-phone" aria-hidden="true"></i>  +54 358-⁠⁠⁠154024296
+				</p>
 			</div>
 		</div>
 		<div class="row justify-content-md-center pt-3">
-			<ul class="nav">
+			<ul class="nav mx-auto">
 			  <a class="nav-link" href="#" style="color:#6e8b96"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a>
 			  <a class="nav-link" href="#" style="color:#6e8b96"><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></a>
 			</ul>		
 		</div>
-		<div class="row justify-content-md-center">
-			<div class="col align-bottom ">
-				<p class="m-0 pt-5 text-center text-white font-italic text-secondary" style="font-size: small;">Copyright © 2017 | Design: Cristian J. Tosco</p>
+		<div class="row">
+			<div class="col align-bottom">
+				<p class="m-0 pt-5 text-center text-white font-italic text-secondary mx-auto" style="font-size: small;">Copyright © 2017 | Design: Cristian J. Tosco</p>
 			</div>
 		</div>
 	</div>
@@ -91,14 +186,17 @@
 
 
         
+            <!--
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
             <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+            -->
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+            <script src="js/contact_me.js"></script>
+            <script src="js/jqBootstrapValidation.js"></script>
             <script src="js/plugins.js"></script>
             <script src="js/main.js"></script>
-            <!-- Bootstrap Core JavaScript -->
-            <script src="js/bootstrap.min.js"></script>
-            <!-- popperjs -->
-            <script src="js/popper.min.js"></script>
             <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
             <script>
                 (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
